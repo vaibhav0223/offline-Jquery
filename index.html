@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>EmployeeApp</title>
+  <base href="/">
+	<script  src="js/jquery-3.2.0.min.js" ></script>
+	<script  src="js/underscore.min.js" ></script>
+	<script  src="js/main.js" ></script>
+	<link rel = "stylesheet" href="styles/styles.css" type = "text/css"></link>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1976d2">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1976d2">
+  <link rel="manifest" href="manifest.webmanifest">
+  	<script type="text/javascript" src="js/offline.js"></script>
+	<script type="text\html" id="reg-table">
+<table class="blueTable">
+  <thead>
+    <th>S.No.</th>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Date</th>
+    <th>No of Registrations</th>
+  </thead>
+  <tbody>
+    <% for(var i = 0; i < eventRecords.length; ++i) { %>
+    <tr>
+      <td id=<%=eventRecords[i]._id%>><%=i%></td>
+      <td><%=eventRecords[i].title%></td>
+      <td><%=eventRecords[i].description%></td>
+      <td><%=eventRecords[i].date%></td>
+      <td><%=eventRecords[i].title%></td>
+    </tr>
+	<%}%>
+  </tbody>
+</table>
+</script>
+</head>
+<body>
+<div style="text-align:center">
+  <h1>
+    Welcome to Registration App
+  </h1>
+</div>
+  <div id="app-root"></div>
+  <noscript>Please enable JavaScript to continue using this application.</noscript>
+</body>
+</html>
